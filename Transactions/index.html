@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+  
+  <!-- Bootstrap -->
+  <link 
+  rel="stylesheet" 
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+  crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <!--   fonts link -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+ 
+  <!-- icon link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" type="image/png" sizes="16x16" href="../Dashboard/plugins/images/favicon.png">
+  <title>FinanceApp</title>
+    
+  <!-- css link -->
+  <link href="./style.css" type="text/css" rel="stylesheet" />
+    
+  <!-- Bootstrap Core CSS -->
+  <link href="../Dashboard/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+  <!-- Menu CSS -->
+  <link href="../Dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    
+  <!-- toast CSS -->
+  <link href="../Dashboard/plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    
+  <!-- morris CSS -->
+  <link href="../Dashboard/plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    
+  <!-- chartist CSS -->
+  <link href="../Dashboard/plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
+  <link href="../Dashboard/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    
+  <!-- animation CSS -->
+  <link href="../Dashboard/css/animate.css" rel="stylesheet">
+    
+  <!-- Custom CSS -->
+  <link href="../Dashboard/css/style.css" rel="stylesheet">
+    
+  <!-- color CSS -->
+  <link href="../Dashboard/css/colors/default.css" id="theme" rel="stylesheet">
+
+	</head>
+
+<body>
+<!--------------------------- Top Navigation ------------------------->
+  <nav class="navbar navbar-default navbar-static-top m-b-0">
+  <div class="navbar-header">
+
+  <!------------------- Top left part ------------------>
+        <div class="top-left-part">
+          <!-- Logo -->
+          <a class="logo" href="dashboard.html">
+          <!-- Logo icon image, you can use font-icon also -->
+            <b>
+              <span>
+                <img src="../Dashboard/plugins/images/admin-logo-dark.png" alt="home" class="light-logo" />
+                  <h4 style="position: absolute; bottom: 10px; left: 60px;">FinanceApp</h4>
+              </span>
+            </b>
+          </a>
+        </div>
+  <!------------------- Top left part end ---------------->
+
+  <!------------------- Top right part ------------------->
+  
+        <ul class="nav navbar-top-links navbar-right pull-right">
+          <li>
+            <a class="nav-toggler open-close waves-effect waves-light hidden-md hidden-lg" href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+              </li>
+          <li>
+          <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
+            <input type="text" placeholder="Search..." class="form-control"> 
+              <a href="">
+                <i class="fa fa-search"></i>
+              </a> 
+          </form>
+          </li>
+          <li>
+              <a class="profile-pic" href="#"> <img src="https://i.ya-webdesign.com/images/avatar-png-1.png" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">User</b></a>
+          </li>
+        </ul>
+  <!------------------- Top right part end ------------------->
+  
+  </div>
+  </nav>
+
+<!--------------------------- End Top Navigation ------------------------->
+
+<!--------------------------- 2nd Navigation ------------------------->
+
+<div class="container-fluid">
+  <div class="row bg-title">
+    
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+      <h4 class="page-title" style="position: absolute; left: 5px;"> Transactions </h4>
+    </div>
+    
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+      
+      <ol class="breadcrumb">
+        
+        <!-- signip link -->
+        <li>
+          <a href="../Dashboard/index.html" class="btn btn-light" style="font-size: 20px;">Dashboard</a>
+        </li>
+      </ol>
+
+    </div>
+
+  </div>
+</div>
+
+<!--------------------------- End 2nd Navigation ------------------------->
+
+<!------------------------------- Filters --------------------------------->
+    <div class="filters">
+    
+    <!-- Month -->
+      <div class="padding">
+        <h6>Do Month</h6>
+        <select id="month">
+            <option value="0">Jan</option>
+            <option value="1">Feb</option>
+            <option value="2">Mar</option>
+            <option value="3">Apr</option>
+            <option value="4">May</option>
+            <option value="5">Jun</option>
+            <option value="6">Jul</option>
+        </select>
+      </div>
+  
+    <!-- Year -->
+
+      <div class="padding">
+        <h6>Form Year</h6>
+        <select id="year">
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+        </select>
+      </div>
+    
+      <!-- choose transactions type -->
+
+      <div class="padding">
+        <h6>Choose</h6>
+        <select id="type-filter">
+          <option value="all">All</option>
+          <option value="income">Incomes</option>
+          <option value="expense">Expenses</option>
+        </select>
+      </div>
+      
+      <!-- Filter btn -->
+      <button type="button" class="btn btn-dark" onclick="filter()">Filter</button>
+    </div>
+
+<!------------------------------- Filters end ------------------------------->
+
+<!------------------------------- Transactions ------------------------------->
+    <div class="transactions">
+      <div class="transactions-header">
+        
+        <div>
+          <h3 display="3">TRANSACTIONS</h3>
+        </div>
+        
+        <div>
+          <p class="padding-1" data-toggle="modal" data-target="#incomeModal"><i class="fa fa-arrow-up" aria-hidden="true"></i> Income </p>
+          <br />
+          <p class="padding-1" data-toggle="modal" data-target="#expenseModal"> <i class="fa fa-arrow-down" aria-hidden="true"></i> Expense</p>
+        </div>
+      
+      </div>
+      
+      <div>
+        
+  <!---------------------- table  -------------------->
+        <table id="transactions-table" class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Category</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+  <!---------------------- table end -------------------->
+      
+      </div>
+ 
+    </div>
+<!----------------------------- Transactions end ---------------------------->
+
+<!------------------------------ Income Modal ------------------------------->
+    <div class="modal fade" id="incomeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Income</h5>
+          </div>
+            <div class="modal-body">
+              <!-- Amount -->
+              <div class="form-group">
+                <label for="Amount">Amount</label>
+                <input type="amount" class="form-control" id="amount">
+              </div>
+              <!-- Category -->
+              <div class="form-group">
+                <label for="Category">Category</label>
+                <select class="form-control" id="category">
+                  <option value="Salery-Income">Salery Income</option>
+                  <option value="Project-Income">Project Income</option>
+                  <option value="VC-Income">VC Income</option>
+                </select>
+              </div>
+               <!-- Receiving Date -->
+              <div class="form-group">
+                <label for="date">Receiving Date</label>
+                <input type="date" class="form-control" id="date">
+              </div>
+              <!-- Description -->
+              <div class="form-group">
+                <label for="Description">Description</label>
+                <input type="Description" class="form-control" id="description">
+              </div>
+            </div>
+            
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark" onclick="saveIncome()">Save changes</button>
+          </div>
+      </div>
+    </div>
+    </div>
+<!------------------------- Income Modal end ----------------------------->  
+
+<!----------------------------- Expense Modal ----------------------------->  
+    <div class="modal fade" id="expenseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Expense</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <div class="modal-body">
+              
+            <!-- Amount -->
+              <div class="form-group">
+                  <label for="Amount-expense">Amount</label>
+                  <input type="amount" class="form-control" id="amount-expense">
+              </div>
+              
+            <!-- Category -->
+              <div class="form-group">
+                  <label for="Category-expense">Category</label>
+                    <select class="form-control" id="category-expense">
+                        <option value="bills">Bills</option>
+                        <option value="rashan">Rashan</option>
+                        <option value="clothing">Clothing</option>
+                    </select>
+              </div>
+            
+              <!-- Receiving Date -->
+                <div class="form-group">
+                    <label for="date-expense">Receiving Date</label>
+                    <input type="date" class="form-control" id="date-expense">
+            </div>
+                          
+              <!-- Description -->
+                <div class="form-group">
+                    <label for="Description-expense">Description</label>
+                    <input type="Description" class="form-control" id="description-expense">
+                </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark" onclick="saveExpense()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!------------------------- Expense Modal end ----------------------->  
+    
+<!-------------------------- firebase link -------------------------->
+    
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    
+  <!-- firebase auth cdn link -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    
+  <!-- firestore link -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+    
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+  // Your web app's Firebase configuration
+    var firebaseConfig = 
+  {
+    apiKey: "AIzaSyBhwJcx9Jx0cqDVxtswGOdGS8ZW8txisLk",
+    authDomain: "finance-app-e0475.firebaseapp.com",
+    databaseURL: "https://finance-app-e0475.firebaseio.com",
+    projectId: "finance-app-e0475",
+    storageBucket: "finance-app-e0475.appspot.com",
+    messagingSenderId: "411200016506",
+    appId: "1:411200016506:web:acd520381f56b0b39d6bc3"
+  };
+   
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  </script>
+
+<!------------------------- firebase link end ------------------------->
+  
+<!------------------------- javascript link --------------------------->
+<script src="./app.js"></script>
+
+<!--------------------------------All Jquery -------------------------->
+    
+<script src="../Dashboard/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    
+<!-- Bootstrap Core JavaScript -->
+<script src="../Dashboard/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+<!-- Menu Plugin JavaScript -->
+<script src="../Dashboard/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    
+<!--slimscroll JavaScript -->
+<script src="../Dashboard/js/jquery.slimscroll.js"></script>
+    
+<!--Wave Effects -->
+<script src="../Dashboard/js/waves.js"></script>
+    
+<!--Counter js -->
+<script src="../Dashboard/plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+<script src="../Dashboard/plugins/bower_components/counterup/jquery.counterup.min.js"></script>
+    
+<!-- chartist chart -->
+<script src="../Dashboard/plugins/bower_components/chartist-js/dist/chartist.min.js"></script>
+<script src="../Dashboard/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
+    
+<!-- Sparkline chart JavaScript -->
+<script src="../Dashboard/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    
+<!-- Custom Theme JavaScript -->
+<script src="../Dashboard/js/custom.min.js"></script>
+<script src="../Dashboard/js/dashboard1.js"></script>
+
+<!---------------------------- All Jquery end ------------------------>
+
+
+</body>
+</html>
